@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         [ng-cloak] {
             display: none;
@@ -30,7 +31,7 @@
     <script>
 
         window.installPath = 'bower_components';
-        window.app = 'appName';
+        window.app = 'incubadoras';
         // include angular loader, which allows the files to load in any order
         //@@NG_LOADER_START@@
         // You need to run `npm run update-index-async` to inject the angular async code here
@@ -127,7 +128,7 @@
                         $script(['app.js'], 'tercero');
 
                         $script.ready('tercero', function () {
-                            angular.bootstrap(document, ['app']);
+                            angular.bootstrap(document, ['incubadoras']);
 
                         });
                     });
