@@ -4,10 +4,16 @@ $color1: #334d00;
 @import "compass";
 @import "compass/reset";
 
+* {
+  font-family: Arial, sans-serif !important;
+}
+
 body {
   height: 100%;
   width: 100%;
 }
+
+// HEADER //
 
 .header {
   font-family: 'Merriweather', serif;
@@ -333,6 +339,27 @@ body {
   }
 }
 
+#header-desktop {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  div {
+    flex: 1;
+  }
+  .desktop-link-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: white;
+      margin: 5px;
+    }
+  }
+}
+
 #Page-1 {
   #window, #body {
     -webkit-animation: rocket-color 1s infinite;
@@ -344,15 +371,134 @@ body {
 }
 
 @keyframes rocket-color {
-  0%{
+  0% {
     fill: blue;
   }
 
-  100%{
+  100% {
     fill: green;
   }
 
 }
 
+#header-desktop-img {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  img {
+    margin-left: -70px;
+  }
+}
 
+// MAIN //
+#main-video {
+  position: relative;
 
+  video {
+
+  }
+  div {
+    position: absolute;
+    color: white;
+    top: calc(50% - 50px);
+    left: calc(50% - 180px);
+    z-index: 500;
+  }
+}
+
+#main-resumen {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+  #proyectos-presentados,
+  #empresas-incubadas,
+  #pesos-financiados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    .resumen-detalle{
+      max-width: 100%;
+      color: white;
+      text-align: center;
+      background-color: rgba(white,.3);
+      position: absolute;
+      bottom: 0;
+    }
+    .circle-container {
+      position: relative;
+      height: 100px;
+      width: 100px;
+      .texto-circle{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        pointer-events: none;
+
+      }
+    }
+  }
+
+  #proyectos-presentados {
+    background-color: #FF5722;
+    flex: 1;
+  }
+
+  #empresas-incubadas {
+    background-color: #8BC34A;
+    flex: 1;
+
+  }
+
+  #pesos-financiados {
+    background-color: #E91E63;
+    flex: 1;
+
+  }
+}
+
+// Circulo
+.wrapper {
+  width: 100px; /* Set the size of the progress bar */
+  height: 100px;
+  position: absolute; /* Enable clipping */
+  //clip: rect(0px, 100px, 100px, 50px); /* Hide half of the progress bar */
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s ;
+  -ms-transition: all .3s ;
+  -o-transition: all .3s ;
+  transition: all .3s ;
+}
+
+.wrapper:hover{
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+/* Set the sizes of the elements that make up the progress bar */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #EFEBE9;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+.right {
+  -webkit-transform: rotate(200deg);
+  transform: rotate(250deg);
+}
+
+.left {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

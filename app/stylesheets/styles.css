@@ -64,12 +64,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 7, ../sass/styles.scss */
+* {
+  font-family: Arial, sans-serif !important;
+}
+
+/* line 11, ../sass/styles.scss */
 body {
   height: 100%;
   width: 100%;
 }
 
-/* line 12, ../sass/styles.scss */
+/* line 18, ../sass/styles.scss */
 .header {
   font-family: 'Merriweather', serif;
   font-weight: bolder;
@@ -85,7 +90,7 @@ body {
   z-index: 1000;
 }
 @media (min-width: 800px) {
-  /* line 12, ../sass/styles.scss */
+  /* line 18, ../sass/styles.scss */
   .header {
     display: flex;
     justify-content: flex-start;
@@ -97,7 +102,7 @@ body {
 }
 
 @media (min-width: 800px) {
-  /* line 35, ../sass/styles.scss */
+  /* line 41, ../sass/styles.scss */
   .menu-type-mobile {
     visibility: collapse;
     display: none !important;
@@ -105,14 +110,14 @@ body {
 }
 
 @media (max-width: 799px) {
-  /* line 42, ../sass/styles.scss */
+  /* line 48, ../sass/styles.scss */
   .menu-type-desktop {
     visibility: collapse;
     display: none !important;
   }
 }
 
-/* line 50, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 .menu-desktop {
   display: flex;
   flex-direction: column;
@@ -124,7 +129,7 @@ body {
   width: 1020px;
   height: 50px;
 }
-/* line 60, ../sass/styles.scss */
+/* line 66, ../sass/styles.scss */
 .menu-desktop #menu-desktop-logo {
   background-color: transparent;
   margin-right: 10px;
@@ -142,11 +147,11 @@ body {
   -o-transition: transform 0.4s ease;
   transition: transform 0.4s ease;
 }
-/* line 84, ../sass/styles.scss */
+/* line 90, ../sass/styles.scss */
 .menu-desktop #menu-desktop-logo:hover {
   cursor: pointer;
 }
-/* line 90, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-upper {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -155,7 +160,7 @@ body {
   transition: all 0.4s ease;
   flex: 0;
 }
-/* line 100, ../sass/styles.scss */
+/* line 106, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-lower {
   background-color: transparent;
   max-height: 35px;
@@ -167,14 +172,14 @@ body {
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
-/* line 112, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-lower #menu-desktop-lower-inner {
   max-width: 1000px;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-/* line 119, ../sass/styles.scss */
+/* line 125, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-lower .menu-desktop-btn {
   cursor: pointer;
   font-family: 'Merriweather', serif;
@@ -195,12 +200,12 @@ body {
   -moz-animation-duration: 2s;
   animation-duration: 2s;
 }
-/* line 139, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-lower .menu-desktop-btn-selected {
   color: bolder;
   opacity: 1;
 }
-/* line 143, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 .menu-desktop #menu-desktop-right #menu-desktop-lower .menu-desktop-btn:hover,
 .menu-desktop #menu-desktop-right #menu-desktop-lower .menu-desktop-btn:focus,
 .menu-desktop #menu-desktop-right #menu-desktop-lower .menu-desktop-btn:active {
@@ -214,7 +219,7 @@ body {
   transition: opacity 2s ease;
 }
 
-/* line 161, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 .menu-mobile-panel {
   font-family: 'Oswald', sans-serif;
   width: 100%;
@@ -241,11 +246,11 @@ body {
   -o-transform: translate(-1000px, 0);
   transform: translate(-1000px, 0);
 }
-/* line 181, ../sass/styles.scss */
+/* line 187, ../sass/styles.scss */
 .menu-mobile-panel a {
   text-decoration: none;
 }
-/* line 185, ../sass/styles.scss */
+/* line 191, ../sass/styles.scss */
 .menu-mobile-panel .menu-desktop-btn {
   margin-top: 15px;
   margin-left: 15px;
@@ -258,20 +263,20 @@ body {
   color: black;
 }
 @media (max-width: 800px) {
-  /* line 185, ../sass/styles.scss */
+  /* line 191, ../sass/styles.scss */
   .menu-mobile-panel .menu-desktop-btn {
     font-size: 24px;
   }
 }
 @media (min-width: 800px) {
-  /* line 161, ../sass/styles.scss */
+  /* line 167, ../sass/styles.scss */
   .menu-mobile-panel {
     visibility: collapse;
     display: none;
   }
 }
 
-/* line 213, ../sass/styles.scss */
+/* line 219, ../sass/styles.scss */
 .menu-mobile-panel-show {
   -webkit-transform: translate(0px, 0);
   -moz-transform: translate(0px, 0);
@@ -280,14 +285,14 @@ body {
   transform: translate(0px, 0);
 }
 
-/* line 221, ../sass/styles.scss */
+/* line 227, ../sass/styles.scss */
 .menu-mobile-panel-show-add {
   -webkit-animation: menu-mobile-enter 0.4s;
   -o-animation: menu-mobile-enter 0.4s;
   animation: menu-mobile-enter 0.4s;
 }
 
-/* line 227, ../sass/styles.scss */
+/* line 233, ../sass/styles.scss */
 .menu-mobile-panel-show-remove {
   -webkit-animation: menu-mobile-leave 0.4s;
   -o-animation: menu-mobile-leave 0.4s;
@@ -326,7 +331,7 @@ body {
     transform: translate(-1000px, 0);
   }
 }
-/* line 269, ../sass/styles.scss */
+/* line 275, ../sass/styles.scss */
 #header-desktop-left {
   max-width: 1000px;
   width: 100%;
@@ -334,7 +339,7 @@ body {
   flex-direction: row;
 }
 
-/* line 276, ../sass/styles.scss */
+/* line 282, ../sass/styles.scss */
 .nav-button-transformed {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -343,7 +348,7 @@ body {
   transform: rotate(180deg);
 }
 
-/* line 284, ../sass/styles.scss */
+/* line 290, ../sass/styles.scss */
 .nav-button {
   flex: 1;
   margin-top: 15px;
@@ -356,7 +361,7 @@ body {
   transform-origin: 13px 13px;
   transform-style: preserve-3D;
 }
-/* line 299, ../sass/styles.scss */
+/* line 305, ../sass/styles.scss */
 .nav-button div {
   cursor: pointer;
   width: 25px;
@@ -370,7 +375,7 @@ body {
   -o-transition: all 0.4s;
   transition: all 0.4s;
 }
-/* line 313, ../sass/styles.scss */
+/* line 319, ../sass/styles.scss */
 .nav-button .nav-button-top-transformed {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -378,7 +383,7 @@ body {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 320, ../sass/styles.scss */
+/* line 326, ../sass/styles.scss */
 .nav-button .nav-button-mid-transformed {
   -webkit-transform: translate(-3px, 0px);
   -moz-transform: translate(-3px, 0px);
@@ -386,7 +391,7 @@ body {
   -o-transform: translate(-3px, 0px);
   transform: translate(-3px, 0px);
 }
-/* line 327, ../sass/styles.scss */
+/* line 333, ../sass/styles.scss */
 .nav-button .nav-button-bot-transformed {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -395,7 +400,32 @@ body {
   transform: rotate(-45deg);
 }
 
-/* line 337, ../sass/styles.scss */
+/* line 342, ../sass/styles.scss */
+#header-desktop {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+/* line 346, ../sass/styles.scss */
+#header-desktop div {
+  flex: 1;
+}
+/* line 349, ../sass/styles.scss */
+#header-desktop .desktop-link-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* line 354, ../sass/styles.scss */
+#header-desktop .desktop-link-nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: white;
+  margin: 5px;
+}
+
+/* line 364, ../sass/styles.scss */
 #Page-1 #window, #Page-1 #body {
   -webkit-animation: rocket-color 1s infinite;
   -o-animation: rocket-color 1s infinite;
@@ -410,4 +440,137 @@ body {
   100% {
     fill: green;
   }
+}
+/* line 384, ../sass/styles.scss */
+#header-desktop-img {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+/* line 388, ../sass/styles.scss */
+#header-desktop-img img {
+  margin-left: -70px;
+}
+
+/* line 394, ../sass/styles.scss */
+#main-video {
+  position: relative;
+}
+/* line 400, ../sass/styles.scss */
+#main-video div {
+  position: absolute;
+  color: white;
+  top: calc(50% - 50px);
+  left: calc(50% - 180px);
+  z-index: 500;
+}
+
+/* line 409, ../sass/styles.scss */
+#main-resumen {
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+}
+/* line 413, ../sass/styles.scss */
+#main-resumen #proyectos-presentados,
+#main-resumen #empresas-incubadas,
+#main-resumen #pesos-financiados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+/* line 421, ../sass/styles.scss */
+#main-resumen #proyectos-presentados .resumen-detalle,
+#main-resumen #empresas-incubadas .resumen-detalle,
+#main-resumen #pesos-financiados .resumen-detalle {
+  max-width: 100%;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 0;
+}
+/* line 429, ../sass/styles.scss */
+#main-resumen #proyectos-presentados .circle-container,
+#main-resumen #empresas-incubadas .circle-container,
+#main-resumen #pesos-financiados .circle-container {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+/* line 433, ../sass/styles.scss */
+#main-resumen #proyectos-presentados .circle-container .texto-circle,
+#main-resumen #empresas-incubadas .circle-container .texto-circle,
+#main-resumen #pesos-financiados .circle-container .texto-circle {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+}
+/* line 447, ../sass/styles.scss */
+#main-resumen #proyectos-presentados {
+  background-color: #FF5722;
+  flex: 1;
+}
+/* line 452, ../sass/styles.scss */
+#main-resumen #empresas-incubadas {
+  background-color: #8BC34A;
+  flex: 1;
+}
+/* line 458, ../sass/styles.scss */
+#main-resumen #pesos-financiados {
+  background-color: #E91E63;
+  flex: 1;
+}
+
+/* line 466, ../sass/styles.scss */
+.wrapper {
+  width: 100px;
+  /* Set the size of the progress bar */
+  height: 100px;
+  position: absolute;
+  /* Enable clipping */
+  -webkit-transition: all .3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 478, ../sass/styles.scss */
+.wrapper:hover {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+/* Set the sizes of the elements that make up the progress bar */
+/* line 487, ../sass/styles.scss */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 10px solid #EFEBE9;
+  border-radius: 50px;
+  position: absolute;
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+/* line 496, ../sass/styles.scss */
+.right {
+  -webkit-transform: rotate(200deg);
+  transform: rotate(250deg);
+}
+
+/* line 501, ../sass/styles.scss */
+.left {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }

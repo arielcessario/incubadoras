@@ -1,10 +1,63 @@
 <div ng-controller="MainController as mainCtrl">
-    <video id="big-video-vid_html5_api" class="vjs-tech" preload="auto" data-setup="{}" webkit-playsinline=""
-           autoplay=""
-           poster="null" src="http://www.lphub.co/videos/Comp17_1280_final.mp4"
-           style="width: 100%;"></video>
+    <div id="main-video">
+        <video id="big-video-vid_html5_api" class="vjs-tech" preload="auto" data-setup="{}" webkit-playsinline=""
+               autoplay=""
+               poster="null" src="http://www.lphub.co/videos/Comp17_1280_final.mp4"
+               style="width: 100%;" loop></video>
+        <div>
+            <h1>Grupo Gestar</h1>
+            <h2>Somos una empresa dedicada a agrupar incubadoras en toda Argentina. Nos respalda nuestra
+                experiencia.</h2>
+        </div>
+    </div>
     <div id="main-resumen" style="height: 300px; background-color: #009688; width: 100%;">
-        <div ng-include="'images/rocket.svg'" alt=""></div>
+        <!--<div ng-include="'images/rocket.svg'" alt=""></div>-->
+        <div id="proyectos-presentados">
+            <div class="circle-container">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle base left"></div>
+                    <div class="circle base right"></div>
+                </div>
+                <div class="texto-circle">
+                    <span>400</span>
+                </div>
+            </div>
+            <div class="resumen-detalle">
+                <h1>Proyectos</h1>
+                <h2>Hemos llegado a presentar mas proyectos que cualquier de las incubadoras de Argentina</h2>
+            </div>
+        </div>
+        <div id="empresas-incubadas">
+            <div class="circle-container">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle base left"></div>
+                    <div class="circle base right"></div>
+                </div>
+                <div class="texto-circle">
+                    <span>400</span>
+                </div>
+            </div>
+            <div class="resumen-detalle">
+                <h1>Proyectos</h1>
+                <h2>Hemos llegado a presentar mas proyectos que cualquier de las incubadoras de Argentina</h2>
+            </div>
+        </div>
+        <div id="pesos-financiados">
+            <div class="circle-container">
+                <div class="wrapper" data-anim="base wrapper">
+                    <div class="circle base left"></div>
+                    <div class="circle base right"></div>
+                </div>
+                <div class="texto-circle">
+                    <span>400</span>
+                </div>
+            </div>
+            <div class="resumen-detalle">
+                <h1>Proyectos</h1>
+                <h2>Hemos llegado a presentar mas proyectos que cualquier de las incubadoras de Argentina</h2>
+            </div>
+
+        </div>
     </div>
 
     <div id="integrantes" style="height: 300px; background-color: #F44336; width: 100%;"></div>
