@@ -10,6 +10,7 @@
         'angular-jwt',
         'auth0',
         'acUtils',
+        'acAnimate',
         'acAutocomplete'
     ]).config(['$routeProvider', 'authProvider', function ($routeProvider, authProvider) {
             authProvider.init({
@@ -32,10 +33,19 @@
         }])
         .controller('AppCtrl', AppCtrl);
 
-    AppCtrl.$inject = [];
-    function AppCtrl() {
+    AppCtrl.$inject = ['$rootScope'];
+    function AppCtrl($rootScope) {
         var vm = this;
+        vm.hideLoader = true;
+        vm.display_menu = true;
+        vm.display_header = true;
 
+        ////////// NAVEGACION //////////
+        $rootScope.$on('$routeChangeSuccess', function (event, next, current) {
+            vm.menu = (next.$$route == undefined) ? current.$$route.originalPath.split('/')[1] : next.$$route.originalPath.split('/')[1];
+            vm.sub_menu = next.params.id;
+        });
+        ////////// NAVEGACION //////////
     }
 
 })();

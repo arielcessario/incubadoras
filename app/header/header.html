@@ -14,16 +14,6 @@
 
     </div>
 
-    <div class="header-separator"></div>
-
-    <div ng-if="!appCtrl.isLogged" class="desktop-link-login"><a href="#/nuevo_usuario">Registrate</a></div>
-
-    <div ng-if="!appCtrl.isLogged" class="desktop-link-login"><a href="#/ingreso">Ingresá</a></div>
-
-    <div ng-if="appCtrl.isLogged"><span>Bienvenido {{appCtrl.welcomeTo}} </span>
-        <button ng-click="appCtrl.logout();">Salir</button>
-    </div>
-
 </div>
 
 <div id="header-desktop" class="menu-type-desktop">
@@ -32,21 +22,11 @@
 
         <div class="desktop-link-nav"><a href="#/main">Home</a></div>
 
-        <div class="desktop-link-nav"><a href="">Categorias</a>
+        <div class="desktop-link-nav"><a href="#/quienessomos">Quienes Somos</a></div>
 
-            <div class="Contenedor-menu-sub">
-                <div class="menu-sub" ng-repeat="categoria in appCtrl.categorias"
-                     ng-click="appCtrl.filterByCategory(categoria.categoria_id)"><a href="">{{categoria.nombre}} ({{categoria.total}})</a>
-                </div>
-            </div>
+        <div class="desktop-link-nav"><a href="#/empresas">Empresas</a></div>
 
-        </div>
-
-        <div class="desktop-link-nav"><a href="#/conozcanos">Conozcanos</a></div>
-
-        <div class="desktop-link-nav"><a href="#/faq">FAQ</a></div>
-
-        <div ng-if="appCtrl.isLogged" class="desktop-link-nav"><a href="#/administracion">Administracion</a></div>
+        <div class="desktop-link-nav"><a href="#/inversores">Inversores</a></div>
 
     </div>
 
@@ -57,15 +37,6 @@
     </div>
 
     <div id="header-desktop-right">
-
-
-        <div ng-if="!appCtrl.isLogged" class="desktop-link-login"><a href="#/nuevo_usuario">Registrate</a></div>
-
-        <div ng-if="!appCtrl.isLogged" class="desktop-link-login"><a href="#/ingreso">Ingresá</a></div>
-
-        <div ng-if="appCtrl.isLogged"><span>Bienvenido {{appCtrl.welcomeTo}} </span>
-            <button ng-click="appCtrl.logout();">Salir</button>
-        </div>
 
         Contacto:
 
@@ -80,33 +51,16 @@
 
 
 <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
-
-
     <div ng-click="appCtrl.menu_mobile_open=false;"
-
          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
-
          class="menu-desktop-btn"><a href="#/main">Home</a></div>
-
-    <div ng-click="appCtrl.menu_mobile_open=false;"
-
-         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
-
-         class="menu-desktop-btn"><a href="#/conozcanos">Conozcanos</a></div>
     <div ng-click="appCtrl.menu_mobile_open=false;"
          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
-         class="menu-desktop-btn"><a href="#/faq">FAQ</a></div>
+         class="menu-desktop-btn"><a href="#/quienessomos">Quienes Somos</a></div>
     <div ng-click="appCtrl.menu_mobile_open=false;"
          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
-         class="menu-desktop-btn"><a href="#/administracion">Administracion</a></div>
+         class="menu-desktop-btn"><a href="#/empresas">Empresas</a></div>
     <div ng-click="appCtrl.menu_mobile_open=false;"
          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
-         class="menu-desktop-btn"><a href="">Categorias</a></div>
-    <div id="header-categorias-mobile">
-        <div ng-repeat="categoria in appCtrl.categorias"  ng-click="appCtrl.filterByCategory(categoria.categoria_id)">{{categoria.nombre}} ({{categoria.total}})</div>
-    </div>
-</div>
-
-<div ng-if="" id="header-categorias-panel">
-    <div ng-repeat="categoria in appCtrl.categorias">{{categoria.nombre}}</div>
+         class="menu-desktop-btn"><a href="#/inversores">Inversores</a></div>
 </div>
