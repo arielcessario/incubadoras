@@ -469,9 +469,10 @@ body {
 #main-resumen {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-top: -10px;
 }
-/* line 413, ../sass/styles.scss */
+/* line 414, ../sass/styles.scss */
 #main-resumen #proyectos-presentados,
 #main-resumen #empresas-incubadas,
 #main-resumen #pesos-financiados {
@@ -480,8 +481,9 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  min-width: 360px;
 }
-/* line 421, ../sass/styles.scss */
+/* line 423, ../sass/styles.scss */
 #main-resumen #proyectos-presentados .resumen-detalle,
 #main-resumen #empresas-incubadas .resumen-detalle,
 #main-resumen #pesos-financiados .resumen-detalle {
@@ -492,7 +494,7 @@ body {
   position: absolute;
   bottom: 0;
 }
-/* line 429, ../sass/styles.scss */
+/* line 431, ../sass/styles.scss */
 #main-resumen #proyectos-presentados .circle-container,
 #main-resumen #empresas-incubadas .circle-container,
 #main-resumen #pesos-financiados .circle-container {
@@ -500,7 +502,7 @@ body {
   height: 100px;
   width: 100px;
 }
-/* line 433, ../sass/styles.scss */
+/* line 435, ../sass/styles.scss */
 #main-resumen #proyectos-presentados .circle-container .texto-circle,
 #main-resumen #empresas-incubadas .circle-container .texto-circle,
 #main-resumen #pesos-financiados .circle-container .texto-circle {
@@ -513,23 +515,23 @@ body {
   color: white;
   pointer-events: none;
 }
-/* line 447, ../sass/styles.scss */
+/* line 449, ../sass/styles.scss */
 #main-resumen #proyectos-presentados {
   background-color: #FF5722;
   flex: 1;
 }
-/* line 452, ../sass/styles.scss */
+/* line 454, ../sass/styles.scss */
 #main-resumen #empresas-incubadas {
   background-color: #8BC34A;
   flex: 1;
 }
-/* line 458, ../sass/styles.scss */
+/* line 460, ../sass/styles.scss */
 #main-resumen #pesos-financiados {
   background-color: #E91E63;
   flex: 1;
 }
 
-/* line 466, ../sass/styles.scss */
+/* line 468, ../sass/styles.scss */
 .wrapper {
   width: 100px;
   /* Set the size of the progress bar */
@@ -537,13 +539,13 @@ body {
   position: absolute;
   /* Enable clipping */
   -webkit-transition: all .3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
-/* line 478, ../sass/styles.scss */
+/* line 480, ../sass/styles.scss */
 .wrapper:hover {
   -webkit-transform: scale(1.4);
   -moz-transform: scale(1.4);
@@ -553,7 +555,7 @@ body {
 }
 
 /* Set the sizes of the elements that make up the progress bar */
-/* line 487, ../sass/styles.scss */
+/* line 489, ../sass/styles.scss */
 .circle {
   width: 80px;
   height: 80px;
@@ -563,14 +565,118 @@ body {
   clip: rect(0px, 50px, 100px, 0px);
 }
 
-/* line 496, ../sass/styles.scss */
+/* line 498, ../sass/styles.scss */
 .right {
   -webkit-transform: rotate(200deg);
   transform: rotate(250deg);
 }
 
-/* line 501, ../sass/styles.scss */
+/* line 503, ../sass/styles.scss */
 .left {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+/* line 509, ../sass/styles.scss */
+#integrantes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 515, ../sass/styles.scss */
+#integrantes #integrantes-list {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* line 523, ../sass/styles.scss */
+#integrantes #integrantes-list .integrante {
+  position: relative;
+  height: 170px;
+  width: 170px;
+  border: 0 solid;
+  border-radius: 170px;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 534, ../sass/styles.scss */
+#integrantes #integrantes-list .integrante img {
+  height: 160px;
+  width: 160px;
+  margin: 10px;
+}
+/* line 539, ../sass/styles.scss */
+#integrantes #integrantes-list .integrante .nombre, #integrantes #integrantes-list .integrante .detalle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+}
+
+/* line 552, ../sass/styles.scss */
+#incubadoras-adheridas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 557, ../sass/styles.scss */
+#incubadoras-adheridas #incubadoras-adheridas-list {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/* line 564, ../sass/styles.scss */
+#incubadoras-adheridas #incubadoras-adheridas-list .incubadora {
+  margin: 10px;
+  height: 160px;
+  width: 160px;
+  background-color: #009688;
+}
+
+/* line 576, ../sass/styles.scss */
+#contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* line 582, ../sass/styles.scss */
+#contacto #contacto-full-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 588, ../sass/styles.scss */
+#contacto #contacto-full-container .contacto-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 598, ../sass/styles.scss */
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* line 602, ../sass/styles.scss */
+#footer #footer-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }

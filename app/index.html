@@ -14,17 +14,20 @@
             justify-content: center;
         }
 
-        #upper-bar{
+        #upper-bar {
             flex: 1;
         }
-        #nav-bar{
+
+        #nav-bar {
             flex: 1;
         }
-        #view{
+
+        #view {
             flex: 6;
             overflow-x: hidden;
         }
-        #footer-bar{
+
+        #footer-bar {
             flex: 2;
         }
     </style>
@@ -156,8 +159,121 @@
 <body ng-cloak ng-controller="AppCtrl as appCtrl">
 <div ng-include="'header/header.html'" class="header"></div>
 <div ng-view id="view"></div>
-<div id="contacto"></div>
-<div id="footer"></div>
+<div id="contacto" form-id="contacto">
+
+    <div id="contacto-full-container">
+        <h1><i class="fa fa-envelope-o" aria-hidden="true"></i>
+            Contacto</h1>
+
+
+        <div id="contacto-form">
+
+            <div class="contacto-panel">
+
+
+                <span>Nombre</span>
+
+
+                <input ac-validator is-required="Debe ingresar un nombre" ng-model="mainCtrl.nombre" type="text"
+                       id="contacto-nombre">
+
+
+                <span>Email</span>
+
+
+                <input ac-validator is-mail="El mail es incorrecto" ng-model="mainCtrl.email" type="text"
+                       id="contacto-mail">
+
+
+                <span>Asunto</span>
+
+
+                <input ac-validator is-required="Debe ingresar un tema de consulta" ng-model="mainCtrl.asunto"
+                       type="text" id="contacto-asunto">
+
+
+            </div>
+
+
+            <div class="contacto-panel">
+
+
+                <span>Escriba aqu&iacute su consulta</span>
+
+
+
+            <textarea ac-validator is-required="Debe ingresar una consulta" class="textoareaconsulta"
+                      ng-model="mainCtrl.mensaje" name="" id="contacto-consulta"
+
+                      rows="10"></textarea>
+
+
+            </div>
+
+        </div>
+
+
+        <fieldset ng-disabled="vm.enviando" class="contacto-panel contacto-enviar-mobile">
+
+
+            <button id="contacto-enviar-mobile" ac-validator ng-click="mainCtrl.sendMail();">Enviar</button>
+
+
+        </fieldset>
+    </div>
+</div>
+<div id="footer" style="height: 300px;">
+
+    <div id="footer-main">
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">INICIO</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'INSTITUCIONAL', path: '/institucional'});">INSTITUCIONAL</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'BUSQUEDA LABORAL', path: '/busquedas_laborales'});">BÚSQUEDA LABORAL</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticias/0'});">NOTICIAS</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'CONTACTO', path: '/contacto'});">CONTACTO</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'REVISTA', path: '/revistas'});">REVISTA</div>
+
+        <a>|</a>
+
+
+        <div ng-click="appCtrl.goTo({nombre: 'INGRESO', path: '/ingreso'});">INGRESO</div>
+
+
+    </div>
+
+    <div id="contacto-gg">
+
+        <h2>0221 423 - 4505 / 0221 422 - 3916 / uiglp@uiglp.org.ar - administracion@uiglp.org.ar</h2>
+
+    </div>
+
+    <div class="contenedor_ac">
+
+        <div class="acdesarrollos">Powered by <A HREF="http://www.ac-desarrollos.com"> AC-desarrollos</A></div>
+
+    </div>
+</div>
 
 
 </body>
