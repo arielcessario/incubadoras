@@ -5,10 +5,9 @@ error_reporting(E_ALL | E_STRICT);  # ...but do log them
 require "jwt_helper.php";
 
 // JWT Secret Key
-//$secret = base64_encode('asdfwearsadfasdareasdfaeasdfaefawasadf');
-$secret = 'asdfwearsadfasdareasdfaeasdfaefawasadf';
+$secret = '';
 // JWT Secret Key Social
-$secret_social = 'LUc_cGQHgmKZyFd5ozKJHnujpam1JKb06FWnjjtnWH9htNKDEQFGNMHYUvX_6PgR';
+$secret_social = '';
 // JWT AUD
 $serverName = 'serverName';
 // false local / true production
